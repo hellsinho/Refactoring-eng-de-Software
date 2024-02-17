@@ -1,3 +1,15 @@
 Você deve identificar pelo menos 5 code smells disintos e descrevê-los em um arquivo no repositório chamado code-smells.txt
 
+#Pontos que vi
+1-não tem variáveis globais
+2- possível feature envy
+3- objetos imutáveis
+
+#code smells
+1- textos dentro do método warGame dentro do main.py, misturando a lógica do método com texto; (Corrigido)
+2- O método notify_winner, está mais complexo do que deveria, podendo ser extraído outro método para reduzir sua complexidade; (corrigido)
+3- O método notify_winner, não tem tratamento de erro caso o jogador não for encontrado;
+4- No arquivo teste, os testes test_winner_has_at_least_three_countries e test_loser_has_two_or_less_countries, são basicamente o mesmo método com a diferença do valor de comparação, ou seja, são códigos duplicados. Fora que eles não tem utilidade já que o if tá usando countrys_won, que é um array, não o booleano. Logo esses testes não fazem sentido existirem; (corrigido)
+5- feature envy ou lazy class, basicamente a classe player não possui métodos e poderia estar inserida na classe warGame no contexto que o código me foi entregue.
+6- DeadCode, no test_notify_winner, tinha um assertTrue, que literalmente só retornava true, já que a condição era um ou outro jogador ganhar. (corrigido)
 
